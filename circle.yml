@@ -1,5 +1,5 @@
 machine:
   timezone:
-    Japan/Tokyo
+    Japan
   node:
     version: 5.1.1
