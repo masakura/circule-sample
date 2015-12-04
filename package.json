@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test",
+    "install": "webdriver-manager update",
+    "test": "protractor",
     "gulp": "gulp"
   },
   "repository": {
@@ -22,6 +23,7 @@
     "eslint-config-airbnb": "^2.0.0",
     "eslint-plugin-react": "^3.11.2",
     "gulp": "^3.9.0",
-    "gulp-util": "^3.0.7"
+    "gulp-util": "^3.0.7",
+    "protractor": "^3.0.0"
   }
 }
