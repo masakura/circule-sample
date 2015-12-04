@@ -3,3 +3,5 @@ machine:
     Japan
   node:
     version: 5.1.1
+  ruby:
+    version: 2.2.3
