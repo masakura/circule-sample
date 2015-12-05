@@ -3,9 +3,10 @@ const JUnitXmlReporter = require('jasmine-reporters').JUnitXmlReporter;
 const HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 
 exports.config = {
-  capabilities: {
-    browserName: 'firefox',
-  },
+  multiCapabilities: [
+    { browserName: 'firefox' },
+    { browserName: 'chrome' },
+  ],
   specs: ['spec/**/*.spec.js'],
 
   onPrepare: () => {
@@ -26,10 +27,7 @@ exports.config = {
       .addReporter(new HtmlScreenshotReporter({
         dest: 'reports/tests/screenshot',
         filename: 'index.html',
-        pathBuilder: spec => {
-          console.log(spec);
-          return path.join(info.base, spec.fullName);
-        },
+        pathBuilder: spec => path.join(info.base, spec.fullName),
       }));
   },
 };
