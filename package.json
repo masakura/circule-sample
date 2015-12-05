@@ -29,6 +29,7 @@
     "jasmine-reporters": "^2.0.7",
     "protractor": "^3.0.0",
     "protractor-jasmine2-screenshot-reporter": "^0.1.7",
-    "rimraf": "^2.4.4"
+    "rimraf": "^2.4.4",
+    "wiredep": "^3.0.0-beta"
   }
 }
