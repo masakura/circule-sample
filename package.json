@@ -23,6 +23,8 @@
     "eslint-config-airbnb": "^2.0.0",
     "eslint-plugin-react": "^3.11.2",
     "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-protractor": "^2.1.0",
     "gulp-util": "^3.0.7",
     "protractor": "^3.0.0"
   }
