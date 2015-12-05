@@ -2,9 +2,14 @@ const gulp = require('gulp');
 const gutil = require('gulp-util');
 const connect = require('gulp-connect');
 const protractor = require('gulp-protractor').protractor;
+const rimraf = require('rimraf');
 
 gulp.task('default', function taskDefault() {
   gutil.log('Finish log');
+});
+
+gulp.task('clean:test', function taskCleanTest() {
+  rimraf('reports/tests', () => {});
 });
 
 gulp.task('serve:test', function taskServeTest() {
@@ -14,7 +19,7 @@ gulp.task('serve:test', function taskServeTest() {
   });
 });
 
-gulp.task('protractor', ['serve:test'], function taskProtractor() {
+gulp.task('protractor', ['clean:test', 'serve:test'], function taskProtractor() {
   return gulp.src('./spec/**/*.spec.js')
     .pipe(protractor())
     .on('error', e => {throw e;});
