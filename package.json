@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "install": "webdriver-manager update",
-    "test": "google-chrome --version && protractor",
+    "test": "google-chrome --version && gulp test",
     "gulp": "gulp"
   },
   "repository": {
