@@ -6,6 +6,10 @@ machine:
   ruby:
     version: 2.2.3
 
+dependencies:
+  pre:
+    - npm install -g bower install
+    - bower install
 general:
   artifacts:
     - "reports"
